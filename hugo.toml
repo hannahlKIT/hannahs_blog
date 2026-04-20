@@ -19,10 +19,10 @@ home = ["HTML", "RSS"]
 
 [params]
   header_image = "img/home-bg-jeep.jpg"
-  SEOTitle = "Hannah's Blog"
-  description = "YOUR BLOG DESCRIPTION HERE"
-  keyword = "blog, YOUR NAME, YOUR TOPICS"
-  slogan = "YOUR SLOGAN HERE"
+  SEOTitle = "Life of Lorena"
+  description = "Hannahh Lorenas personal blog"
+  keyword = "blog, Hannah Lorena, journalism, travel"
+  slogan = "My toughts, work and everything else"
   upstreamAttribution = false
 
   image_404 = "img/404-bg.jpg"
