@@ -18,7 +18,7 @@ hasCJKLanguage = false
 home = ["HTML", "RSS"]
 
 [params]
-  header_image = "img/home-bg-jeep.jpg"
+  header_image = "img/Header_sitzend.JPG"
   SEOTitle = "Life of Lorena"
   description = "Hannah Lorenas personal blog"
   keyword = "blog, Hannah Lorena, journalism, travel"
