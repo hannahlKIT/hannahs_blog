@@ -1,4 +1,4 @@
-baseurl = "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/"
+baseurl = "https://hannahlKIT.github.io/hannahs_blog/"
 title = "Hannah's Blog"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
