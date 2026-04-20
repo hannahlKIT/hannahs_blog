@@ -20,7 +20,7 @@ home = ["HTML", "RSS"]
 [params]
   header_image = "img/home-bg-jeep.jpg"
   SEOTitle = "Life of Lorena"
-  description = "Hannahh Lorenas personal blog"
+  description = "Hannah Lorenas personal blog"
   keyword = "blog, Hannah Lorena, journalism, travel"
   slogan = "My toughts, work and everything else"
   upstreamAttribution = false
@@ -38,7 +38,7 @@ home = ["HTML", "RSS"]
   algolia_indexName = ""
   algolia_apiKey = ""
 
-  sidebar_about_description = "YOUR SHORT BIO HERE"
+  sidebar_about_description = "About me"
   sidebar_avatar = "img/avatar.jpg"
 
   featured_tags = true
@@ -63,9 +63,9 @@ home = ["HTML", "RSS"]
 
   [params.social]
   rss            = true
-  email          = "YOUR_EMAIL@gmail.com"
+  email          = "hstaus@gmx.com"
   github         = "https://github.com/YOUR_GITHUB_USERNAME"
-  #linkedin      = "https://www.linkedin.com/in/YOURID"
+  #linkedin      = "https://www.linkedin.com/in/hannah-staus-2020/"
   #instagram     = "full profile url in instagram"
   #twitter       = "full profile url in twitter"
 
