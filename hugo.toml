@@ -1,0 +1,93 @@
+baseurl = "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/"
+title = "Hannah's Blog"
+theme = "hugo-theme-cleanwhite"
+languageCode = "en-us"
+preserveTaxonomyNames = true
+hasCJKLanguage = false
+
+[services]
+  [services.disqus]
+    shortname = ""
+  [services.googleAnalytics]
+    id = ""
+
+[pagination]
+  pagerSize = 5
+
+[outputs]
+home = ["HTML", "RSS"]
+
+[params]
+  header_image = "img/home-bg-jeep.jpg"
+  SEOTitle = "Hannah's Blog"
+  description = "YOUR BLOG DESCRIPTION HERE"
+  keyword = "blog, YOUR NAME, YOUR TOPICS"
+  slogan = "YOUR SLOGAN HERE"
+  upstreamAttribution = false
+
+  image_404 = "img/404-bg.jpg"
+  title_404 = "Page not found :("
+  omit_categories = false
+
+  page_view_counter = false
+  leancloud_app_id = ""
+  leancloud_app_key = ""
+
+  algolia_search = false
+  algolia_appId = ""
+  algolia_indexName = ""
+  algolia_apiKey = ""
+
+  sidebar_about_description = "YOUR SHORT BIO HERE"
+  sidebar_avatar = "img/avatar.jpg"
+
+  featured_tags = true
+  featured_condition_size = 1
+
+  ba_track_id = ""
+  disqus_proxy = ""
+  disqus_site = ""
+  twikoo_env_id = ""
+
+  artalk_enable = false
+  artalk_server = ""
+  artalk_site = ""
+
+  reward = false
+
+  friends = false
+  bookmarks = false
+  about_me = true
+
+  last_posts = true
+
+  [params.social]
+  rss            = true
+  email          = "YOUR_EMAIL@gmail.com"
+  github         = "https://github.com/YOUR_GITHUB_USERNAME"
+  #linkedin      = "https://www.linkedin.com/in/YOURID"
+  #instagram     = "full profile url in instagram"
+  #twitter       = "full profile url in twitter"
+
+[[params.additional_menus]]
+  title = "ARCHIVE"
+  href  = "/archive/"
+[[params.additional_menus]]
+  title = "ABOUT"
+  href  = "/about/"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    startLevel = 1
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[mediaTypes]
+  [mediaTypes.'font/woff']
+    suffixes = ['woff']
+  [mediaTypes.'font/woff2']
+    suffixes = ['woff2']
