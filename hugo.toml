@@ -1,5 +1,5 @@
 baseurl = "https://hannahlKIT.github.io/hannahs_blog/"
-title = "Hannah's Blog"
+title = "Life of Lorena"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
 preserveTaxonomyNames = true
