@@ -29,13 +29,13 @@ hasCJKLanguage = false
     languageName = "Deutsch"
     languageCode = "de-de"
     weight = 2
-    title = "Das Leben von Lorena"
+    title = "Life of Lorena"
     contentDir = "content"
     [languages.de.params]
-      SEOTitle = "Das Leben von Lorena"
+      SEOTitle = "Life of Lorena"
       description = "Hannah Lorenas persönlicher Blog"
       keyword = "Blog, Hannah Lorena, Journalismus, Reisen"
-      slogan = "Meine Gedanken, Arbeit und alles dazwischen"
+      slogan = "My thoughts, work and everything else"
       sidebar_about_description = "Über mich"
     [[languages.de.params.additional_menus]]
       title = "ARCHIV"
