@@ -11,4 +11,4 @@ I’m about to finish my master’s degree in science communication, with the go
 
 I’m also a proud first-generation student, Fulbright alumna, founder of the First-Generation Student Club in Karlsruhe, dog mom, and so much more.
 
-Feel free to reach out via [email](mailto:YOUR_EMAIL@gmail.com) or connect on [LinkedIn] (https://www.linkedin.com/in/hannah-staus-2020/).
+Feel free to reach out via [email](mailto:YOUR_EMAIL@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/hannah-staus-2020/).
