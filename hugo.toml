@@ -1,9 +1,48 @@
 baseurl = "https://hannahlKIT.github.io/hannahs_blog/"
 title = "Life of Lorena"
 theme = "hugo-theme-cleanwhite"
-languageCode = "en-us"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 preserveTaxonomyNames = true
 hasCJKLanguage = false
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
+    title = "Life of Lorena"
+    [languages.en.params]
+      SEOTitle = "Life of Lorena"
+      description = "Hannah Lorenas personal blog"
+      keyword = "blog, Hannah Lorena, journalism, travel"
+      slogan = "My thoughts, work and everything else"
+      sidebar_about_description = "About me"
+    [[languages.en.params.additional_menus]]
+      title = "ARCHIVE"
+      href  = "archive/"
+    [[languages.en.params.additional_menus]]
+      title = "ABOUT"
+      href  = "about/"
+
+  [languages.de]
+    languageName = "Deutsch"
+    languageCode = "de-de"
+    weight = 2
+    title = "Das Leben von Lorena"
+    contentDir = "content"
+    [languages.de.params]
+      SEOTitle = "Das Leben von Lorena"
+      description = "Hannah Lorenas persönlicher Blog"
+      keyword = "Blog, Hannah Lorena, Journalismus, Reisen"
+      slogan = "Meine Gedanken, Arbeit und alles dazwischen"
+      sidebar_about_description = "Über mich"
+    [[languages.de.params.additional_menus]]
+      title = "ARCHIV"
+      href  = "archive/"
+    [[languages.de.params.additional_menus]]
+      title = "ÜBER"
+      href  = "about/"
 
 [services]
   [services.disqus]
@@ -19,12 +58,10 @@ home = ["HTML", "RSS"]
 
 [params]
   header_image = "img/Header_sitzend.JPG"
-  SEOTitle = "Life of Lorena"
-  description = "Hannah Lorenas personal blog"
-  keyword = "blog, Hannah Lorena, journalism, travel"
-  slogan = "My toughts, work and everything else"
   upstreamAttribution = false
-    
+
+  dark_mode_toggle = false
+  auto_theme = false
 
   image_404 = "img/404-bg.jpg"
   title_404 = "Page not found :("
@@ -39,7 +76,6 @@ home = ["HTML", "RSS"]
   algolia_indexName = ""
   algolia_apiKey = ""
 
-  sidebar_about_description = "About me"
   sidebar_avatar = "img/Profilbild.JPG"
 
   featured_tags = true
@@ -69,13 +105,6 @@ home = ["HTML", "RSS"]
   #linkedin      = "https://www.linkedin.com/in/hannah-staus-2020/"
   #instagram     = "full profile url in instagram"
   #twitter       = "full profile url in twitter"
-
-[[params.additional_menus]]
-  title = "ARCHIVE"
-  href  = "archive/"
-[[params.additional_menus]]
-  title = "ABOUT"
-  href  = "about/"
 
 [markup]
   [markup.tableOfContents]
