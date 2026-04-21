@@ -10,10 +10,10 @@
     <!-- Short About -->
 	{{ if .Site.Params.about_me }}
     <section class="visible-md visible-lg">
-	<!--<hr><h5><a href="{{ "/about" | relLangURL }}">ABOUT ME</a></h5>-->
+	<!--<hr><h5><a href="{{ "about" | relURL }}">ABOUT ME</a></h5>-->
         <div class="short-about">
             {{ with .Site.Params.sidebar_avatar }}
-            <a href="{{ "/about" | relLangURL }}">
+            <a href="{{ "about" | relURL }}">
                <img src="{{ . | relURL }}" alt="avatar" style="cursor: pointer" />
             </a>
             {{ end }}
@@ -227,7 +227,7 @@
             {{ $featured_condition_size := .Site.Params.featured_condition_size }}
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
                {{ if gt (len $taxonomy.Pages) $featured_condition_size }}
-                    <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">
+                    <a href="{{ "tags/" | relURL }}{{ $name | urlize }}" title="{{ $name }}">
                         {{ $name }}
                     </a>
                {{ end }}
