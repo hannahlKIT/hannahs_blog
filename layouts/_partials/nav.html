@@ -36,28 +36,27 @@
                         <a href="{{ "search" | relLangURL }}"><i class="fa fa-search"></i></a>
                     </li>
 
-                    {{ if gt (len .Site.Languages) 1 }}
-                    <li class="lang-switcher">
-                        {{ $page := . }}
-                        {{ range .Site.Languages }}
-                            {{ $lang := . }}
-                            {{ if eq .Lang $page.Site.Language.Lang }}
-                                <span class="lang-current">{{ .Lang | upper }}</span>
-                            {{ else }}
-                                {{ $href := "" }}
-                                {{ range $page.AllTranslations }}
-                                    {{ if eq .Language.Lang $lang.Lang }}
-                                        {{ $href = .RelPermalink }}
-                                    {{ end }}
+                    {{ $page := . }}
+                    {{ range .Site.Languages }}
+                        {{ $lang := . }}
+                        {{ if eq .Lang $page.Site.Language.Lang }}
+                            <li class="lang-item active"><a href="#" onclick="return false;" aria-current="page">{{ .Lang | upper }}</a></li>
+                        {{ else }}
+                            {{ $href := "" }}
+                            {{ range $page.AllTranslations }}
+                                {{ if eq .Language.Lang $lang.Lang }}
+                                    {{ $href = .RelPermalink }}
                                 {{ end }}
-                                {{ if not $href }}
-                                    {{ $href = printf "/%s/" $lang.Lang }}
-                                    {{ if eq $lang.Lang $page.Site.Home.Site.LanguagePrefix }}{{ end }}
-                                {{ end }}
-                                <a href="{{ $href | relURL }}">{{ .Lang | upper }}</a>
                             {{ end }}
+                            {{ if not $href }}
+                                {{ if eq $lang.Lang "en" }}
+                                    {{ $href = "/" }}
+                                {{ else }}
+                                    {{ $href = printf "/%s/" $lang.Lang }}
+                                {{ end }}
+                            {{ end }}
+                            <li class="lang-item"><a href="{{ $href | relURL }}">{{ .Lang | upper }}</a></li>
                         {{ end }}
-                    </li>
                     {{ end }}
                 </ul>
             </div>
@@ -65,9 +64,14 @@
     </div>
 </nav>
 <style>
-    .lang-switcher { padding: 0 10px; }
-    .lang-switcher a, .lang-switcher .lang-current { padding: 0 4px; text-transform: uppercase; font-size: 13px; }
-    .lang-switcher .lang-current { font-weight: bold; opacity: 0.6; }
+    .navbar-custom .nav li.lang-item.active > a { opacity: 0.55; cursor: default; }
+    .navbar-custom .nav li.lang-item.active > a:hover,
+    .navbar-custom .nav li.lang-item.active > a:focus { color: inherit; background: transparent; }
+    @media only screen and (min-width:768px){
+        .navbar-custom .nav li.lang-item { margin-left: 0; }
+        .navbar-custom .nav li.lang-item + .lang-item > a { padding-left: 4px; }
+        .navbar-custom .nav li.lang-item:first-of-type > a { padding-right: 4px; }
+    }
 </style>
 <script>
     var $body   = document.body;
