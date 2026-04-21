@@ -39,10 +39,11 @@
                     {{ $page := . }}
                     {{ range .Site.Languages }}
                         {{ $lang := . }}
-                        {{ if eq .Lang $page.Site.Language.Lang }}
-                            <li class="lang-item active"><a href="#" onclick="return false;" aria-current="page">{{ .Lang | upper }}</a></li>
+                        {{ $isCurrent := eq .Lang $page.Site.Language.Lang }}
+                        {{ $href := "" }}
+                        {{ if $isCurrent }}
+                            {{ $href = $page.RelPermalink }}
                         {{ else }}
-                            {{ $href := "" }}
                             {{ range $page.AllTranslations }}
                                 {{ if eq .Language.Lang $lang.Lang }}
                                     {{ $href = .RelPermalink }}
@@ -55,8 +56,10 @@
                                     {{ $href = printf "/%s/" $lang.Lang }}
                                 {{ end }}
                             {{ end }}
-                            <li class="lang-item"><a href="{{ $href | relURL }}">{{ .Lang | upper }}</a></li>
                         {{ end }}
+                        <li{{ if $isCurrent }} class="lang-current"{{ end }}>
+                            <a href="{{ $href | relURL }}">{{ .Lang | upper }}</a>
+                        </li>
                     {{ end }}
                 </ul>
             </div>
@@ -64,14 +67,7 @@
     </div>
 </nav>
 <style>
-    .navbar-custom .nav li.lang-item.active > a { opacity: 0.55; cursor: default; }
-    .navbar-custom .nav li.lang-item.active > a:hover,
-    .navbar-custom .nav li.lang-item.active > a:focus { color: inherit; background: transparent; }
-    @media only screen and (min-width:768px){
-        .navbar-custom .nav li.lang-item { margin-left: 0; }
-        .navbar-custom .nav li.lang-item + .lang-item > a { padding-left: 4px; }
-        .navbar-custom .nav li.lang-item:first-of-type > a { padding-right: 4px; }
-    }
+    .navbar-custom .nav li.lang-current > a { opacity: 0.5; }
 </style>
 <script>
     var $body   = document.body;
